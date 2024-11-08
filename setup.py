@@ -11,12 +11,13 @@ setup(
     name="borzoi",
     version=version,
     description="borzoi",
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="David Kelley, Johannes Linder",
     author_email="drk@calicolabs.com",  # Choose a primary contact email or use a combined one
     url="https://github.com/calico/borzoi",
-    packages=find_packages(),
     python_requires=">=3.9",
     install_requires=[
         "h5py~=3.10.0",
@@ -52,5 +53,4 @@ setup(
     ],
     include_package_data=True,
     zip_safe=False,
-    use_scm_version={"write_to": "borzoi/_version.py"}  # Optional: if you want to use SCM to write versions
 )
